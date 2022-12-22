@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-@org.apache.hadoop.hive.ql.exec.Description(name = "explode_json_arrays_sorted", value = "_FUNC_(a) - " +
+@org.apache.hadoop.hive.ql.exec.Description(name = "explode_json_arrays_sorted", value = "_FUNC_(JsonArrays... a) - " +
         "separates the elements of json array a into multiple rows; If columns of different lengths are inputed, " +
         "the number of rows in the longest column will returned." +
         "The others will return \'{}\';")
