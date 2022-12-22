@@ -16,8 +16,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 
-@org.apache.hadoop.hive.ql.exec.Description(name = "explode_json_array", value = "_FUNC_(a) - separates the elements of json array a into multiple rows;" +
-        "if input null,please give default value: \"[{}]\"")
+@org.apache.hadoop.hive.ql.exec.Description(name = "explode_json_array", value = "_FUNC_(a) - separates the elements of json array a into multiple rows;")
 public class GenericUDTFExplodeJSONArray extends GenericUDTF {
     private static final Logger log = LoggerFactory.getLogger(GenericUDTFExplodeJSONArray.class);
 
