@@ -1,6 +1,5 @@
 package com.tangshiwei.udf;
 
-import com.tangshiwei.udtf.GenericUDTFExplodeJSONArray;
 import com.tangshiwei.utils.URLCoderUtil;
 import lombok.SneakyThrows;
 import org.apache.hadoop.hive.ql.exec.UDFArgumentException;
@@ -62,7 +61,6 @@ public class GenericUDFUrlDecode extends GenericUDF {
         }else {
             try {
             return URLCoderUtil.hasEnCode(o.toString()) ? URLDecoder.decode(o.toString(), StandardCharsets.UTF_8.name()) : o.toString();
-//            return URLDecoder.decode(o.toString(), StandardCharsets.UTF_8.name()) ;
         }catch (RuntimeException e){
                 LOG.error("decode error");
                 return null;
@@ -77,7 +75,7 @@ public class GenericUDFUrlDecode extends GenericUDF {
      */
     @Override
     public String getDisplayString(String[] strings) {
-        return getStandardDisplayString("GenericUDFDecode",strings);
+        return getStandardDisplayString(GenericUDFUrlDecode.class.getName(),strings);
     }
 
 }
